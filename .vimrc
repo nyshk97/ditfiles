@@ -3,6 +3,7 @@ call plug#begin()
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
+Plug 'tomtom/tcomment_vim'
 call plug#end()
 "emmetの設定
 let g:user_emmet_leader_key = '<C-A>'
