@@ -56,6 +56,7 @@ set cursorline " 現在の行を強調表示
 set showmatch " 括弧入力時の対応する括弧を表示
 set tabstop=2 "タブ幅
 set expandtab "タブの代わりにスペースを利用
+set hlsearch "検索結果をハイライト
 inoremap <silent> jj <ESC> 
 "括弧補完
 inoremap { {}<Left>
