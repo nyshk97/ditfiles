@@ -83,3 +83,5 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 nnoremap te :tabe
 nnoremap tc :tabc
 nnoremap // :%s/
+nnoremap j gj
+nnoremap k gk
