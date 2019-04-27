@@ -2,6 +2,7 @@
 call plug#begin()
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
 Plug 'airblade/vim-gitgutter'
 Plug 'tomtom/tcomment_vim'
 Plug 'osyo-manga/vim-anzu'
@@ -28,6 +29,10 @@ let g:user_emmet_settings = {
 \    }
 \  }
 \}
+"NERDTree
+let g:nerdtree_tabs_open_on_console_startup=1
+let NERDTreeShowHidden = 1
+
 "検索位置表示の設定 mapping
 nmap n <Plug>(anzu-n-with-echo)
 nmap N <Plug>(anzu-N-with-echo)
@@ -46,7 +51,7 @@ if has('vim_starting')
 endif
 set encoding=utf-8
 scriptencoding utf-8
-colorscheme molokai
+colorscheme iceberg
 syntax on
 set autoindent " 改行時に前の行のインデントを継続する
 set smartindent " 改行時に前の行の構文をチェックし次の行のインデントを増減する
@@ -85,3 +90,5 @@ nnoremap tc :tabc
 nnoremap // :%s/
 nnoremap j gj
 nnoremap k gk
+nnoremap <c-h> gT
+nnoremap <c-l> gt
