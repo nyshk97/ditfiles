@@ -6,6 +6,9 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'airblade/vim-gitgutter'
 Plug 'tomtom/tcomment_vim'
 Plug 'osyo-manga/vim-anzu'
+Plug 'Shougo/vimshell.vim'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'Shougo/neocomplete.vim'
 call plug#end()
 "emmetの設定
 let g:user_emmet_leader_key = '<C-A>'
@@ -32,6 +35,12 @@ let g:user_emmet_settings = {
 "NERDTree
 let g:nerdtree_tabs_open_on_console_startup=1
 let NERDTreeShowHidden = 1
+let g:NERDTreeWinSize = 30
+
+"VimShell
+nnoremap <silent> vs :VimShellPop<CR>
+let g:vimshell_prompt =  '$ '
+let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
 
 "検索位置表示の設定 mapping
 nmap n <Plug>(anzu-n-with-echo)
