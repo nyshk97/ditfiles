@@ -9,6 +9,7 @@ Plug 'osyo-manga/vim-anzu'
 Plug 'Shougo/vimshell.vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'Shougo/neocomplete.vim'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 "emmetの設定
 let g:user_emmet_leader_key = '<C-A>'
@@ -33,14 +34,20 @@ let g:user_emmet_settings = {
 \  }
 \}
 "NERDTree
-let g:nerdtree_tabs_open_on_console_startup=1
+" let g:nerdtree_tabs_open_on_console_startup=1
 let NERDTreeShowHidden = 1
 let g:NERDTreeWinSize = 30
 
 "VimShell
-nnoremap <silent> vs :VimShellPop<CR>
+nnoremap <silent> vp :VimShellPop<CR>
 let g:vimshell_prompt =  '$ '
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
+
+"easymotion
+nmap f <Plug>(easymotion-s2)
+let g:EasyMotion_smartcase = 1
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
 
 "検索位置表示の設定 mapping
 nmap n <Plug>(anzu-n-with-echo)
@@ -52,7 +59,7 @@ nmap <Esc><Esc> <Plug>(anzu-clear-search-status)
 " statusline
 set statusline=%{anzu#search_status()}u
 
-"　その他のカスタム設定
+"その他のカスタム設定
 if has('vim_starting')
     let &t_SI .= "\e[6 q" " 挿入モード時に非点滅の縦棒タイプのカーソル
     let &t_EI .= "\e[2 q" " ノーマルモード時に非点滅のブロックタイプのカーソル
@@ -94,10 +101,13 @@ endfunction
 inoremap <silent> <expr> " QuotesCompletion("\"")
 inoremap <silent> <expr> ' QuotesCompletion("\'")
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
-nnoremap te :tabe
-nnoremap tc :tabc
+nnoremap te :tabe<CR>
+nnoremap tc :tabc<CR>
 nnoremap // :%s/
 nnoremap j gj
 nnoremap k gk
 nnoremap <c-h> gT
 nnoremap <c-l> gt
+let mapleader = "\<Space>"
+nnoremap rc :source ~/.vimrc
+nnoremap noh :noh<CR>
