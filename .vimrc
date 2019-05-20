@@ -34,7 +34,7 @@ let g:user_emmet_settings = {
 \  }
 \}
 "NERDTree
-" let g:nerdtree_tabs_open_on_console_startup=1
+let g:nerdtree_tabs_open_on_console_startup=1
 let NERDTreeShowHidden = 1
 let g:NERDTreeWinSize = 30
 
@@ -111,3 +111,10 @@ nnoremap <c-l> gt
 let mapleader = "\<Space>"
 nnoremap rc :source ~/.vimrc
 nnoremap noh :noh<CR>
+"画面移動
+nnoremap s <Nop>
+nnoremap sj <C-w>j
+nnoremap sk <C-w>k
+nnoremap sl <C-w>l
+nnoremap sh <C-w>h
+
