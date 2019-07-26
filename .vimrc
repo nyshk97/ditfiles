@@ -10,6 +10,7 @@ Plug 'Shougo/vimshell.vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'Shougo/neocomplete.vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'Valloric/MatchTagAlways'
 call plug#end()
 "emmetの設定
 let g:user_emmet_leader_key = '<C-A>'
@@ -34,7 +35,7 @@ let g:user_emmet_settings = {
 \  }
 \}
 "NERDTree
-let g:nerdtree_tabs_open_on_console_startup=1
+" let g:nerdtree_tabs_open_on_console_startup=1
 let NERDTreeShowHidden = 1
 let g:NERDTreeWinSize = 30
 
@@ -101,7 +102,7 @@ endfunction
 inoremap <silent> <expr> " QuotesCompletion("\"")
 inoremap <silent> <expr> ' QuotesCompletion("\'")
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
-nnoremap te :tabe<CR>
+nnoremap te :tabe 
 nnoremap tc :tabc<CR>
 nnoremap // :%s/
 nnoremap j gj
