@@ -15,7 +15,13 @@ alias rr='rails routes'
 
 # Git
 alias ga='git add -A'
+alias gb='git checkout -b'
 alias gc='git commit'
 alias gm='git checkout master'
-alias gp='git push origin HEAD'
-alias gh='git push heroku master'
+alias gpush='git push origin HEAD'
+alias gheroku='git push heroku master'
+
+# Hub
+eval "$(hub alias -s)"
+alias gsee='git browse'
+alias gpr='git pull-request'
